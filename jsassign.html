@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="num1" placeholder="Enter number 1">
+    <input type="text" id="num2" placeholder="Enter number 2">
+    <br>
+    <button id="addButton">Add</button>
+    <button id="subtractButton">Subtract</button>
+    <button id="multiplyButton">Multiply</button>
+    <button id="divideButton">Divide</button>
+    <br>
+    <p>Result: <span id="result"></span></p>
+
+<script>
+
+var num1Input = document.getElementById('num1');
+var num2Input = document.getElementById('num2');
+var addButton = document.getElementById('addButton');
+var subtractButton = document.getElementById('subtractButton');
+var multiplyButton = document.getElementById('multiplyButton');
+var divideButton = document.getElementById('divideButton');
+var resultDisplay = document.getElementById('result');
+
+function addNumbers() {
+    var num1 = parseFloat(num1Input.value);
+    var num2 = parseFloat(num2Input.value);
+    var sum = num1 + num2;
+    resultDisplay.textContent = sum;
+}
+
+function subtractNumbers() {
+    var num1 = parseFloat(num1Input.value);
+    var num2 = parseFloat(num2Input.value);
+    var difference = num1 - num2;
+    resultDisplay.textContent = difference;
+}
+
+function multiplyNumbers() {
+    var num1 = parseFloat(num1Input.value);
+    var num2 = parseFloat(num2Input.value);
+    var product = num1 * num2;
+    resultDisplay.textContent = product;
+}
+
+function divideNumbers() {
+    var num1 = parseFloat(num1Input.value);
+    var num2 = parseFloat(num2Input.value);
+    var quotient = num1 / num2;
+     resultDisplay.textContent = quotient;
+    
+}
+
+addButton.addEventListener('click', addNumbers);
+subtractButton.addEventListener('click', subtractNumbers);
+multiplyButton.addEventListener('click', multiplyNumbers);
+divideButton.addEventListener('click', divideNumbers);
+
+
+</script>
+</body>
+</html>
